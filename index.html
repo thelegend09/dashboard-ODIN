@@ -6,12 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Dashboard</title>
 </head>
 
 <body>
     <div class="panel-left">
-        <div class="id"><img src="img/main-avatar.png" alt="main avatar">
+        <div class="id"><img src="https://i.pravatar.cc/300" width="50px" alt="main avatar">
             <p class="name">Olivier Legendre</p>
             <p class="job-title">Sr. Visual Designer</p>
         </div>
@@ -45,15 +48,48 @@
                 </li>
             </ul>
         </div>
-        <div class="new-task">+</div>
+        <button class="new-task btn">+</buttonn>
         <div class="copyright">2022 Olivier Legendre</div>
     </div>
 
     <div class="panel-middle">
         <div class="top">
-            <div class="greeting">Hi Olivier!</div>
+            <header class="greeting">Hi Olivier!</header>
             <div class="completion-rate">15% task completed</div>
-            <div></div>
+            <div class="cards-container">
+                <div class="card">
+                    <i class="ri-lightbulb-flash-fill"></i>
+                    <!-- vertical ellipsis at https://www.compart.com/en/unicode/U+22EE -->
+                    <span class="vertical-ellipsis">&vellip;</span>
+                    <p class="card-title">R&D for New Banking Mobile App</p>
+                    <div class="avatars">
+                        <img src="" alt="" class="avatar">
+                        <img src="" alt="" class="avatar">
+                        <img src="" alt="" class="avatar">
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="ri-lightbulb-flash-fill"></i>
+                    <!-- vertical ellipsis at https://www.compart.com/en/unicode/U+22EE -->
+                    <span class="vertical-ellipsis">&vellip;</span>
+                    <p class="card-title">Create Signup Page</p>
+                    <div class="avatars">
+                        <img src="" alt="" class="avatar">
+                        <img src="" alt="" class="avatar">
+                        <img src="" alt="" class="avatar">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="monthly-tasks">
+                <header class="monthly-tasks">Monthly Tasks</header>
+                <button class="btn archive">Archive</button>
+                <button class="btn new">+ New</button>
+            </div>
+
+
+
         </div>
 
 

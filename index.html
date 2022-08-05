@@ -9,33 +9,62 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Dashboard</title>
 </head>
 
 <body>
     <div class="panel-left">
-        <div class="id"><img src="https://i.pravatar.cc/300" width="50px" alt="main avatar">
-            <p class="name">Olivier Legendre</p>
+        <div class="id">
+            <img class="main avatar"
+                src="https://avataaars.io/?avatarStyle=Circle&topType=WinterHat2&accessoriesType=Wayfarers&hatColor=Pink&facialHairType=MoustacheFancy&facialHairColor=BrownDark&clotheType=ShirtScoopNeck&clotheColor=PastelBlue&eyeType=Squint&eyebrowType=UpDownNatural&mouthType=Grimace&skinColor=Pale">
+            />
+            <div class="name">Olivier Legendre</div>
             <p class="job-title">Sr. Visual Designer</p>
         </div>
         <nav class="menu">
+            <h3 class="menu-title">Menu</h3>
             <ul>
-                <li><i class="ri-terminal-line menu-icon"></i>My Tasks<div class="notification"></div>
+                <li class="menu-item">
+                    <div class="indicator"></div>
+                    <i class="ri-terminal-line menu-icon"></i>
+                    My Tasks
+                    <div class="notification"></div>
                 </li>
-                <li><i class="ri-inbox-line menu-icon menu-active"></i>Inbox<div class="notification"></div>
+                <li class="menu-item menu-active">
+                    <div class="indicator"></div>
+                    <i class="ri-inbox-line menu-icon"></i>
+                    Inbox
+                    <div class="notification"></div>
                 </li>
-                <li><i class="ri-compass-line menu-icon"></i>Projects<div class="notification"></div>
+                <li class="menu-item">
+                    <div class="indicator"></div>
+                    <i class="ri-compass-line menu-icon"></i>
+                    Projects
+                    <div class="notification"></div>
                 </li>
-                <li><i class="ri-time-line menu-icon"></i>Standups<div class="notification"></div>
+                <li class="menu-item">
+                    <div class="indicator"></div>
+                    <i class="ri-time-line menu-icon"></i>
+                    Standups
+                    <div class="notification"></div>
                 </li>
-                <li><i class="ri-calendar-event-line menu-icon"></i>Meetings<div
-                        class="notification notification-active">5</div>
+                <li class="menu-item">
+                    <div class="indicator"></div>
+                    <i class="ri-calendar-event-line menu-icon"></i>
+                    Meetings
+                    <div class="notification notification-active">5</div>
                 </li>
-                <li><i class="ri-equalizer-fill menu-icon"></i>Settings</li>
+                <li class="menu-item">
+                    <div class="indicator"></div>
+                    <i class="ri-equalizer-fill menu-icon"></i>
+                    Settings
+                </li>
             </ul>
         </nav>
 
         <div class="favorites">
+            <h3 class="favorites-title">Favorites</h3>
             <ul>
                 <li>
                     <div class="circle"></div>Redwhale Design
@@ -48,42 +77,48 @@
                 </li>
             </ul>
         </div>
-        <button class="new-task btn">+</buttonn>
-            <div class="copyright">2022 Olivier Legendre</div>
+        <button class="new-task btn">+</button>
+        <div class="copyright">2022 Olivier Legendre</div>
     </div>
 
     <div class="panel-middle">
         <div class="top">
-            <header class="greeting">Hi Olivier!</header>
+            <h1 class="greeting">Hi Olivier!</h1>
             <div class="completion-rate">15% task completed</div>
-            <div class="cards-container">
-                <div class="card">
-                    <i class="ri-lightbulb-flash-fill"></i>
-                    <!-- vertical ellipsis at https://www.compart.com/en/unicode/U+22EE -->
-                    <i class="ri-more-2-fill verical-ellipsis"></i>
-                    <p class="card-title">R&D for New Banking Mobile App</p>
-                    <div class="avatars">
-                        <img src="" alt="" class="avatar">
-                        <img src="" alt="" class="avatar">
-                        <img src="" alt="" class="avatar">
-                    </div>
+
+        </div>
+        <div class="cards-container">
+            <div class="card">
+                <i class="ri-lightbulb-flash-fill card-icon"></i>
+                <!-- vertical ellipsis at https://www.compart.com/en/unicode/U+22EE -->
+                <i class="ri-more-2-fill card-ellipsis"></i>
+                <p class="card-title">R&D for New Banking Mobile App</p>
+                <div class="avatars">
+                    <img src='https://avataaars.io/?avatarStyle=Circle&topType=LongHairMiaWallace&accessoriesType=Blank&hairColor=BrownDark&facialHairType=BeardMedium&facialHairColor=Black&clotheType=BlazerShirt&eyeType=Close&eyebrowType=Angry&mouthType=Serious&skinColor=DarkBrown'
+                        class="avatar">
+                    <img class="avatar"
+                        src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShaggyMullet&accessoriesType=Wayfarers&hairColor=Red&facialHairType=MoustacheMagnum&facialHairColor=Brown&clotheType=Overall&clotheColor=White&eyeType=WinkWacky&eyebrowType=DefaultNatural&mouthType=Smile&skinColor=Yellow' />
+                    <img class="avatar"
+                        src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairDreads01&accessoriesType=Blank&hairColor=SilverGray&facialHairType=BeardMajestic&facialHairColor=BlondeGolden&clotheType=ShirtCrewNeck&clotheColor=PastelRed&eyeType=Surprised&eyebrowType=UnibrowNatural&mouthType=Twinkle&skinColor=Pale' />
                 </div>
-                <div class="card">
-                    <i class="ri-lightbulb-flash-fill"></i>
-                    <!-- vertical ellipsis at https://www.compart.com/en/unicode/U+22EE -->
-                    <span class="vertical-ellipsis">&vellip;</span>
-                    <p class="card-title">Create Signup Page</p>
-                    <div class="avatars">
-                        <img src="" alt="" class="avatar">
-                        <img src="" alt="" class="avatar">
-                        <img src="" alt="" class="avatar">
-                    </div>
+            </div>
+            <div class="card">
+                <i class="ri-key-2-fill  card-icon"></i>
+                <!-- vertical ellipsis at https://www.compart.com/en/unicode/U+22EE -->
+                <i class="ri-more-2-fill card-ellipsis"></i>
+                <p class="card-title">Create Signup Page</p>
+                <div class="avatars">
+                    <img class="avatar"
+                        src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairTheCaesarSidePart&accessoriesType=Kurt&hairColor=Blonde&facialHairType=BeardLight&facialHairColor=Auburn&clotheType=ShirtCrewNeck&clotheColor=Blue03&eyeType=Wink&eyebrowType=UpDown&mouthType=ScreamOpen&skinColor=Tanned' />
+                    <img class="avatar"
+                        src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairFrizzle&accessoriesType=Prescription01&hatColor=PastelYellow&hairColor=Blonde&facialHairType=Blank&clotheType=Overall&clotheColor=Blue02&eyeType=Close&eyebrowType=AngryNatural&mouthType=Serious&skinColor=DarkBrown' />
+                    <img class="avatar"
+                        src='https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurly&accessoriesType=Round&hatColor=Heather&hairColor=Red&facialHairType=MoustacheFancy&facialHairColor=Black&clotheType=GraphicShirt&clotheColor=White&graphicType=SkullOutline&eyeType=WinkWacky&eyebrowType=RaisedExcitedNatural&mouthType=Serious&skinColor=Tanned' />
                 </div>
             </div>
         </div>
-
         <div class="monthly-tasks">
-            <header class="monthly-tasks">Monthly Tasks</header>
+            <h1 class="monthly-tasks">Monthly Tasks</h1>
             <button class="btn archive">Archive</button>
             <button class="btn new-task">+ New</button>
             <div class="tasks-active active">Active tasks</div>
@@ -91,7 +126,7 @@
             <div class="search"><i class="ri-search-line"></i> Search</div>
 
             <div class="tasks-today">
-                <header>Today</header>
+                <h1>Today</h1>
 
                 <!-- task template -->
                 <div class="tasks">
@@ -136,9 +171,9 @@
 
     <div class="panel-right">
         <div class="schedule-today">
-            <header class="schedule-title">Today’s schedule</header>
+            <h1 class="schedule-title">Today’s schedule</h1>
             <div class="schedule-icons"><i class="ri-calendar-line"></i><i class="ri-function-line"></i></div>
-            
+
 
         </div>
 

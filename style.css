@@ -112,19 +112,20 @@ p {
     justify-content: center;
     font-weight: var(--font-weight-7);
     color: #b5b7c5;
-    
-    /* padding: 1em 0; */
 }
 
-.indicator {
-    background-color: #ef3661;
-    height: 2rem;
-    border-radius: 25% 50% 50% 25%;
-    /* position: relative; */
-    left: -30px;
-    opacity: 0;
 
+.menu-item:hover {
+    color: #ef3661;
 }
+
+.menu-item:active {
+    color: var(--grape-7)
+}
+
+
+
+
 
 
 .menu-item .notification {
@@ -133,7 +134,6 @@ p {
     width: 1.5rem;
     height: 1.5rem;
     display: flex;
-    /* or inline-flex */
     align-items: center;
     justify-content: center;
 }
@@ -145,16 +145,7 @@ p {
 }
 
 
-.menu-item:hover {
-    color: #ef3661;
-    opacity: 1;
-}
 
-
-
-.menu-icon {
-    /* width: 7em; */
-}
 
 
 /* 3. middle panel  */
@@ -278,6 +269,7 @@ p {
 :active:is(.tasks-active, .tasks-completed, .search) {
     color: var(--grape-9);
 }
+
 
 .tasks-header {
     display: flex;

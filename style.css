@@ -43,11 +43,22 @@ li {
     padding: 0;
 }
 
-ul, p {
+ul,
+p {
     padding: 0;
     margin: 0;
 }
 
+.btn {
+
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-radius: 999px;
+    border: var(--border-size-4);
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: Poppins, var(--font-sans);
+}
 
 .panel-left {
     border-radius: 15px 0 0 15px;
@@ -113,8 +124,9 @@ ul, p {
     border-radius: 50%;
     width: 1.5rem;
     height: 1.5rem;
-    display: flex; /* or inline-flex */
-    align-items: center; 
+    display: flex;
+    /* or inline-flex */
+    align-items: center;
     justify-content: center;
 }
 
@@ -141,10 +153,11 @@ ul, p {
 
 /* 3.1 top cards */
 
-.top {
+.panel-middle .top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .completion-rate {
@@ -156,34 +169,42 @@ ul, p {
     grid-template-columns: 1fr 1fr;
     justify-content: space-around;
     gap: 20px;
+    padding-bottom: 1em;
 }
 
 .card {
     display: grid;
     grid-template: 1fr 1fr 1fr / 1fr 1fr;
-    background-color: #ef3661;
+
     border-radius: 25px;
     align-items: center;
     padding: 20px;
-    box-shadow: 0 3.2px 7.2px 0 rgb(0 0 0 / 13%), 0 0.6px 1.8px 0 rgb(0 0 0 / 11%);
-    
+    box-shadow: var(--shadow-2);
+
 }
 
+.card:first-of-type {
+    background-color: #ef3661;
+}
+
+.card:nth-of-type(2) {
+    background-color: var(--grape-7);
+}
 
 .card:hover {
-    box-shadow: 0 6.4px 14.4px 0 rgb(0 0 0 / 13%), 0 1.2px 3.6px 0 rgb(0 0 0 / 11%);
+    box-shadow: var(--shadow-4);
     transition: 250ms ease-in-out;
 }
 
 .card-icon {
     font-size: 2rem;
     color: white;
-    background-color: #c03858;
+    background-color: rgb(0 0 0 / 20%);
     padding: 0.2em;
     width: 3rem;
     height: 3rem;
     border-radius: 10px;
-    
+
 }
 
 .card-icon:hover {
@@ -196,7 +217,7 @@ ul, p {
     justify-self: end;
     border-radius: 50%;
     padding: 0.5em;
-    
+
 }
 
 .card-ellipsis:hover {
@@ -208,6 +229,9 @@ ul, p {
     grid-area: 2 / 1 / 3 / 3;
     margin: 0;
     padding: 0;
+    color: white;
+    font-weight: 800;
+    font-size: 1.2rem;
 
 }
 
@@ -217,3 +241,85 @@ ul, p {
 }
 
 /* 3.2 Monthly tasks  */
+
+.monthly-task {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    ;
+}
+
+.task-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.btn.new-task {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    background-color: var(--grape-9);
+    color: white;
+}
+
+.btn.new-task:hover {
+    box-shadow: var(--shadow-4);
+    transition: 250ms ease-in-out;
+    background-color: var(--grape-7);
+}
+
+.btn.archive {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    background-color: var(--gray-1);
+    color: var(--grape-9);
+}
+
+.btn.archive:hover {
+    box-shadow: var(--shadow-3);
+    transition: 250ms ease-in-out;
+    background-color: var(--gray-3);
+}
+
+.tasks {
+    display: grid;
+    grid-template-columns: 1fr 6fr 2fr;
+    grid-template-areas: 
+        "client-logo task-description ."
+        "client-logo task-description .";
+    padding: 0.5em 0;
+    align-items: center;
+
+}
+
+.tasks:hover {
+    background-color: var(--gray-1);
+}
+
+.client-logo {
+    grid-area: "client-logo";
+    width: 2.5rem;
+    justify-self: center;
+}
+
+.client-name {
+    grid-area: "client-name";
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.task-description {
+    grid-area: "task-description";
+}
+
+.task-proper {
+    display: flex;
+    color: var(--gray-5);
+}
+
+.due-date {
+    padding-left: 3px;
+}
+.due-date::before {
+    content: "~ ";
+}

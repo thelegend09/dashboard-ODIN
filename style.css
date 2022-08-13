@@ -56,7 +56,7 @@ p {
     border-radius: 999px;
     border: var(--border-size-4);
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 500;
     font-family: Poppins, var(--font-sans);
 }
 
@@ -82,7 +82,9 @@ p {
 
 
 
-/* 2. Left panel  */
+/* 2. LEFT PANEL  */
+
+/* 2.1 avatar and name  */
 
 .avatar {
     border-radius: 50%;
@@ -91,6 +93,39 @@ p {
     height: 50px;
     position: relative;
 }
+
+.id {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: start;
+}
+
+.main-avatar {
+    grid-row: 1 / 3;
+
+}
+
+.main-avatar:hover {
+    transform: rotate(15deg);
+    transition: all 1s ease-out;
+}
+
+.job-title {
+    font-size: 0.9rem;
+    color: var(--gray-5);
+    align-self: start;
+    grid-row: 2 / 3;
+}
+
+.name {
+    font-weight: 800;
+    align-self: start;
+    grid-area: "name";
+    font-size: 1.2rem;
+}
+
+/* 2.2 menu */
 
 .menu-title,
 .favorites-title {
@@ -101,13 +136,13 @@ p {
 
 .menu ul {
     display: grid;
-    grid-template-rows: repeat(6, 1.5rem);
+    grid-template-rows: repeat(6, 2rem);
     gap: 1em;
 }
 
 .menu-item {
     display: grid;
-    grid-template-columns: 0.2fr 1.2fr 6fr 1fr;
+    grid-template-columns: 1fr 6fr;
     align-items: center;
     justify-content: center;
     font-weight: var(--font-weight-7);
@@ -117,38 +152,86 @@ p {
 
 .menu-item:hover {
     color: #ef3661;
+    border-left: 6px solid #ef3661;
+    padding-left: 1.85rem;
+    transform: translateX(-1.85rem);
+    transition: 50ms;
 }
 
 .menu-item:active {
-    color: var(--grape-7)
+    color: var(--grape-7);
+
 }
 
 
 
 
+/* 2.3 favorites */
 
 
-.menu-item .notification {
-    font-size: 1rem;
+.favorites {
+    margin: 3rem 0;
+}
+
+.favorites ul {
+    display: grid;
+    grid-template-rows: 2rem 2rem 2rem;
+    gap: 1em;
+    margin: 1em 0 0 0;
+}
+
+.circle {
+    height: 1rem;
+    width: 1rem;
+    background-color: transparent;
     border-radius: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
-    display: flex;
+    display: inline-block;
+}
+
+.circle.blue {
+    border: 1.5px solid rgb(25, 142, 238);
+}
+
+.circle.pink {
+    border: 1.5px solid pink;
+}
+
+.circle.cyan {
+    border: 1.5px solid cyan;
+}
+
+
+.favorites li {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
     align-items: center;
     justify-content: center;
+    font-weight: var(--font-weight-7);
+    color: #b5b7c5;
 }
 
-.menu-item .notification-active {
-    font-weight: var(--font-weight-3);
-    color: #fff;
-    background: #ef3661;
+/* 2.4 plus button */
+
+.panel-left > .new-task {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    margin: 3rem 0;
+    background-color: #c03858;
+
+}
+
+/* 2.5 copyright  */
+.copyright {
+    font-size: 0.9rem;
+    color: var(--gray-5);
 }
 
 
-
-
-
-/* 3. middle panel  */
+/* 3. MIDDLE PANEL  */
 
 /* 3.1 top cards */
 
@@ -241,7 +324,7 @@ p {
 
 /* 3.2 Monthly tasks  */
 
-
+/* 3.2.1 first header */
 .active-completed-header {
     display: flex;
     justify-content: space-between;
@@ -251,57 +334,6 @@ p {
     color: var(--gray-5);
     text-transform: uppercase;
     font-size: .8rem;
-    
-}
-
-:is(.tasks-active, .tasks-completed, .search) {
-    padding: 1em 0 0 0;
-    /* border-bottom: 1px solid var(--gray-4); */
-    padding-bottom: 1em;
-}
-
-:hover:is(.tasks-active, .tasks-completed, .search) {
-    color: var(--grape-7);
-    font-weight: 900;
-    transition: 250ms;
-}
-
-:active:is(.tasks-active, .tasks-completed, .search) {
-    color: var(--grape-9);
-}
-
-
-.tasks-header {
-    display: flex;
-    gap: 1.5em;
-    
-}
-
-
-.search {
-    justify-self: end;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-
-}
-
-.tasks-active {
-    
-}
-
-
-
-.monthly-task {
-    display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
-    ;
-}
-
-.task-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
 }
 
@@ -331,10 +363,60 @@ p {
     background-color: var(--gray-3);
 }
 
+
+/* 3.2.2 second header  */
+
+:is(.tasks-active, .tasks-completed, .search) {
+    padding: 1em 0 0 0;
+    /* border-bottom: 1px solid var(--gray-4); */
+    padding-bottom: 1em;
+}
+
+:hover:is(.tasks-active, .tasks-completed, .search) {
+    color: var(--grape-7);
+    font-weight: 900;
+    transition: 250ms;
+}
+
+:active:is(.tasks-active, .tasks-completed, .search) {
+    color: var(--grape-9);
+}
+
+
+.tasks-header {
+    display: flex;
+    gap: 1.5em;
+
+}
+
+
+.search {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+}
+
+
+.monthly-task {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.task-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* 3.2.3 the tasks themeselves */
+
 .tasks {
     display: grid;
     grid-template-columns: 1fr 6fr 2fr;
-    grid-template-areas: 
+    grid-template-areas:
         "client-logo task-description ."
         "client-logo task-description .";
     padding: 0.5em 0;
@@ -370,6 +452,7 @@ p {
 .due-date {
     padding-left: 3px;
 }
+
 .due-date::before {
     content: "~ ";
 }
@@ -378,3 +461,5 @@ p {
 .task-tomorrow {
     padding-bottom: 1em;
 }
+
+/* 4. RIGHT PANEL */
